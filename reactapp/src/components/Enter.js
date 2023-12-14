@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import React, { useState } from 'react';
 import hospital from './PICS/pharmacy.jpg';
 import NClogo from './PICS/NClogo.png';
+import { Link } from 'react-router-dom';
 
 export function Fields({activeTab}){
   if (activeTab==='login'){
@@ -52,13 +53,19 @@ export function Fields({activeTab}){
           </div>
 
           <br></br>
-          <a href='d'>Are you a doctor?</a>
+          <Link to='../doctor' preventScrollReset={true}>Are you a doctor?</Link>
           </div>
       </form>
       </div>
     )
   }
   }
+
+export function DoctorEntry(){
+  return(
+    <h1>Doc Entry Page!!</h1>
+  )
+}
 
 export function Front(){
     const [activeTab, setActiveTab] = useState('login');
